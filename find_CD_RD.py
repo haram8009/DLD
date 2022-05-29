@@ -229,11 +229,11 @@ def solution(minterm):
         secondery_epi_str_list, PiList, mintermList = findEPI(PiList, mintermList)
 
         if len(secondery_epi_str_list)>0: # secondery_epi 발생
-            secondery_epi_str_list+=['<-secondery_epi']
+            secondery_epi_str_list
             answer+=secondery_epi_str_list
         else : # secondery_epi가 생기지 않으면 chooseInterchangable
             secondery_epi_str_list, PiList, mintermList = chooseInterchangeable(PiList, mintermList)
-            secondery_epi_str_list+=['<-chooseInterchangable']
+            secondery_epi_str_list
             answer+=secondery_epi_str_list
 
     # print : 2->'-'
