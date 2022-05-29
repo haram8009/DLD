@@ -1,0 +1,3 @@
+[Command: python -u C:\KMU-DLD\find_CD_RD.py]
+['001-', '0-11', '10-1', '1-01', '-011', 'EPI', '001-', '0-11', '1-01', 'secondery EPI', '-011']
+[Finished in 0.357s]

@@ -1,3 +1,3 @@
-update find_CD_RD.py
+upload testCase2,3,4.txt
 
-출력 방식 수정
+출력 결과 확인
