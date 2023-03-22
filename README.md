@@ -1,1 +1,2 @@
-update find_CD_RD 보고서.pdf
+# 논리회로설계 과제
+오류있음..
