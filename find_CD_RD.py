@@ -83,7 +83,6 @@ def findPI(n, PiList, mintermList):
     pi_str_list.sort()
     return pi_str_list, PiList, mintermList
 
-
 def findEPI(PiList, mintermList):
     pi_chart = makePiChart(PiList, mintermList)
     epi_str_list=[]
@@ -108,6 +107,7 @@ def findEPI(PiList, mintermList):
                     if mt in mintermList:
                         mintermList.remove(mt)
                 PiList.remove(I)
+    print(makePiChart(PiList, mintermList), "EPI")
     return epi_str_list, PiList, mintermList
 
 def eliminateDominatingColumns(PiList, mintermList):
@@ -146,8 +146,8 @@ def eliminateDominatingColumns(PiList, mintermList):
     for mt in dominatingMtList:
         if mt in mintermList:
             mintermList.remove(mt)
+    print(makePiChart(PiList, mintermList), "CD")
     return PiList, mintermList
-
 
 def eliminateDominatedRows(PiList, mintermList):
     def isDominated(pi, next_pi):
@@ -169,6 +169,8 @@ def eliminateDominatedRows(PiList, mintermList):
     for pi in dominatedPiList:
         if pi in PiList:
             PiList.remove(pi)
+    print(makePiChart(PiList, mintermList), "RD")
+    print(dominatedPiList)
     return PiList, mintermList
 
 def chooseInterchangeable(PiList, mintermList):
@@ -189,7 +191,6 @@ def chooseInterchangeable(PiList, mintermList):
     for pi in covered_list:
         PiList.remove(pi) # pi에는 choosedInterchangeable도 포함되어있음
     return [str], PiList, mintermList
-
 
 def makePiChart(PiList, mintermList):
     pi_chart=[]
@@ -246,7 +247,8 @@ def solution(minterm):
     return answer
 
 
-# minterm = [4,11 ,0,2,5,6,7,8,10,12,13,14,15]
+minterm = [4,11 ,0,2,5,6,7,8,10,12,13,14,15]
 minterm = [4,13 ,0,2,3,4,5,6,7,8,9,10,11,12,13]
-# minterm = [4,6, 2,3,7,9,11,13]
+minterm = [4,6, 2,3,7,9,11,13]
+minterm = [4,8, 0,4,8,10,11,12,13,15]
 print(solution(minterm))
